@@ -1,0 +1,26 @@
+block variables
+
+doctype html
+html(lang="ru-RU")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv='X-UA-Compatible' content="IE = edge")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    //- meta(name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no")
+
+    title #{title}
+    meta(name="keywords" content="")
+    meta(name="description" content="")
+    link(rel="stylesheet" href="css/libs.min.css")
+    link(rel="stylesheet" href="css/fancybox/fancybox.css")
+    link(rel="stylesheet" href="css/fancybox/fancybox-thumbs.css")
+    link(rel="stylesheet" href="css/main.min.css?v=20210415")
+  body
+    .page
+      include ../parts/header
+      main.main
+        block main
+      include ../parts/footer
+    script(src="js/libs.min.js")
+    script(src="js/main.min.js")
+    block script

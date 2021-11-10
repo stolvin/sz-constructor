@@ -1,0 +1,18 @@
+header.header(class=homepage ? 'header--homepage' : '')
+  .wrapper
+    .header__block
+      a.header__logo(href='/' title='На главную страницу') СЗ&nbsp;Конструктор
+        //- img(src="../img/logo.svg")
+      .header__hamburger
+        .line
+        .line
+        .line
+      .header__nav
+        ul.header__menu
+          each item, index in {company:'О компании', objects:'Объекты', buy:'Как купить'}
+            li.header__menu-item
+              a(href='/' + index + '.html').header__menu-link= item
+          li.header__menu-item
+              a(href='/company.html#contacts').header__menu-link Контакты
+        a(href="tel:+74212257257").header__phone +7 (4212) 257-257
+        //- a(href="/").header__phone 8 (4212) 28-78-87

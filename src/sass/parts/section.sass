@@ -1,0 +1,119 @@
+.section
+  display: flex
+  justify-content: space-between
+  flex-wrap: wrap
+  @include media-md
+    flex-direction: column
+    flex-wrap: nowrap
+
+  &__title
+    flex-basis: 25%
+    padding-right: 30px
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    @include media-lg
+      flex-basis: 30%
+
+  &__content
+    position: relative
+    flex-basis: 75%
+    min-width: 0
+    @include media-lg
+      flex-basis: 70%
+
+  &__fullcontent
+    flex-basis: 100%
+    position: relative
+    margin-top: 25px
+    @include media-lg
+      margin-top: 20px
+    @include media-md2
+      margin-top: 15px
+
+  &__map
+    border: 1px solid $color-accent
+
+
+.carousel
+  
+  &__item
+    margin: 0 15px
+    outline: none
+    @include media-md
+      margin: 0 10px
+  
+  &__link
+    outline: none
+    color: $color-font-main
+    &:hover
+      color: $color-accent
+  
+  &__img
+    max-height: 300px
+    padding: 12px
+    object-fit: contain
+    border: 1px solid rgba($color-font-main, .2)
+    transition: all .3s ease
+    &:hover
+      border: 1px solid $color-bg-accent
+    &--blank
+      height: 180px
+      background-color: $color-bg-light
+    &--white
+      height: 180px
+      background-color: $color-bg-main
+    &--full
+      height: 180px
+      padding: 0
+      object-fit: cover
+    
+  &__title
+    display: inline-block
+    margin-top: 15px
+    &--news
+      font-weight: 700
+      margin-top: 5px
+
+  &__date
+    display: inline-block
+    font-size: 15px
+    margin-top: 15px
+    // &:hover
+      // color: inherit
+
+  &__buttons
+    display: flex
+    @include media-md
+      display: none
+
+  &__btn
+    width: 60px
+    height: 36px
+    border: 2px solid $color-font-main
+    border-radius: 6px
+    margin-right: 10px
+    opacity: .2
+    cursor: pointer
+    background: url(../img/icon_arrow_2.png) no-repeat center center
+    transition: opacity .2s ease
+    outline: none
+    &--prev
+      transform: rotate(180deg)
+    &:hover,
+    &:focus
+      opacity: .5
+  
+
+.slick-track
+  display: flex
+  height: 100%
+
+.slick-list
+  overflow: hidden
+  margin: 0 -15px
+  @include media-md
+    margin: 0 -10px
+    padding-right: 20%
+  @include media-sm
+    padding-right: 30%

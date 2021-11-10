@@ -1,0 +1,64 @@
+.objects
+  position: relative
+  display: flex
+  flex-direction: column
+  justify-content: flex-start
+  align-items: center
+
+  &__header
+    position: relative
+    width: 100%
+    height: 340px
+    background: url(../img/objectsheader_bg.jpg) no-repeat 50% 50%
+    margin-bottom: 280px
+    &:after
+      content: ''
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      background-color: $color-accent
+      opacity: .85
+
+  &__block
+    position: absolute
+    top: 60px
+    // border: 1px solid red
+    text-align: center
+    margin-bottom: 100px
+
+  &__title
+    text-align: center
+    text-transform: uppercase
+    font-size: 30px
+    margin: 0 0 35px 0
+    color: $color-font-accent
+
+  &__list
+    display: flex
+    flex-direction: row
+    justify-content: center
+
+  &__item
+    display: flex
+    flex-direction: column
+    width: 400px
+    height: 400px
+    margin: 0 15px
+    background-color: $color-font-accent
+    box-shadow: 0 5px 7px 0 rgba($color-font-main, .15)
+    transition: .3s
+    &:hover
+      color: $color-accent
+      box-shadow: 0 7px 12px 0 rgba($color-font-main, .25)
+  
+  &__img
+    width: 100%
+    height: auto
+
+  &__name
+    margin-top: 25px
+    font-size: 20px
+    font-weight: 700
+    text-transform: none

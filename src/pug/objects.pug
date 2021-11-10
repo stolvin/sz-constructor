@@ -1,0 +1,59 @@
+extends layout/main
+
+block variables
+  - var title = 'Строительная компания СЗ "Конструктор" - Объекты'
+
+block main
+  .container
+    .wrapper
+      .breadcrumbs
+        a(href="/").breadcrumbs__link Главная
+        span.breadcrumbs__current Объекты
+      h1.h1 Текущие проекты
+        
+      article.objectcard
+        .objectcard__img
+          img(src="/img/object_02_s.jpg")
+        .objectcard__body
+          h2.h2.objectcard__title Жилой комплекс &laquo;Элемент&raquo;
+          .objectcard__subtitle Двухсекционный жилой многоквартирный дом со встроенными офисными помещениями и подземной одноэтажной автостоянкой
+          .objectcard__ready.objectcard__ready--no Сдача объекта &mdash; IV&nbsp;квартал 2023&nbsp;года
+          ul.objectcard__roomslist.roomslist
+            li.roomslist__item
+              .roomslist__title Студии
+              .roomslist__value 76
+            li.roomslist__item
+              .roomslist__title 1-комнатные
+              .roomslist__value 68
+            li.roomslist__item
+              .roomslist__title 2-комнатные
+              .roomslist__value 42
+            li.roomslist__item
+              .roomslist__title 3-комнатные
+              .roomslist__value 18
+            li.roomslist__item
+              .roomslist__title Машиноместа
+              .roomslist__value 109
+          a(href="/object_02.html").objectcard__btn Подробнее
+
+      article.objectcard
+        .objectcard__img
+          img(src="/img/object_01_s.jpg")
+        .objectcard__body
+          h2.h2.objectcard__title Жилой комплекс &laquo;Виктория&raquo;
+          .objectcard__subtitle  Жилой многоквартирный дом со встроенными офисными помещениями и подземной одноэтажной автостоянкой по улице Шевчука
+          .objectcard__ready.objectcard__ready--yes Объект сдан в эксплуатацию
+          ul.objectcard__roomslist.roomslist
+            li.roomslist__item
+              .roomslist__title 1-комнатные
+              .roomslist__value 54
+            li.roomslist__item
+              .roomslist__title 2-комнатные
+              .roomslist__value 48
+            li.roomslist__item
+              .roomslist__title 3-комнатные
+              .roomslist__value 14
+            li.roomslist__item
+              .roomslist__title Машиноместа
+              .roomslist__value 50
+          a(href="/object_01.html").objectcard__btn Подробнее

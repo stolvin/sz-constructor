@@ -1,0 +1,143 @@
+@import params
+@import mixins
+@import fonts
+// @import grid
+
+html
+  box-sizing: border-box
+
+*,
+*::before,
+*::after 
+  box-sizing: inherit
+
+body
+  margin: 0
+  font: 200 18px $font-family-main
+  color: $color-font-main
+  background-color: $color-bg-main
+  @include media-lg
+    font-size: 16px
+  @include media-md
+    font-size: 15px
+
+img
+  display: block
+  max-width: 100%
+
+a
+  text-decoration: none
+  color: inherit
+  transition: all .2s ease
+  &:hover
+    color: $color-font-accent
+
+ul
+  padding: 0
+  list-style: none
+
+input,
+button,
+textarea,
+select
+  font: inherit
+
+button
+  border: none
+  // outline: none
+
+.visually-hidden 
+  position: absolute
+  width: 1px
+  height: 1px
+  margin: -1px
+  padding: 0
+  border: 0
+  clip: rect(0 0 0 0)
+  overflow: hidden
+
+.container
+  @include min-max($screen-width-xs, 100%, 0)
+  // overflow: hidden
+
+.wrapper
+  @include min-max($screen-width-xs, $screen-width-xl, 15px)
+  // border: 1px solid red
+
+.page
+  display: flex
+  flex-direction: column
+  min-height: 100vh
+  overflow: hidden
+
+.main
+  flex: 1 1 auto
+  background-color: $color-bg-main
+  margin-top: 120px
+  @include media-md
+    margin-top: 90px
+
+section
+  margin-bottom: 80px
+  @include media-lg
+    margin-bottom: 50px
+  @include media-md
+    margin-bottom: 40px
+  @include media-sm
+    margin-bottom: 30px
+
+p
+  margin: 0
+
+p:not(:last-child)
+  margin-bottom: 15px
+  @include media-lg
+    margin-bottom: 12px
+  @include media-md
+    margin-bottom: 10px
+
+.h1
+  margin: 0 0 50px 0
+  font-size: 36px
+  font-weight: 700
+  line-height: 1.1
+  @include media-lg
+    font-size: 32px
+  @include media-md
+    font-size: 28px
+
+.h2
+  margin: 0 0 15px 0
+  font-size: 28px
+  font-weight: 700
+  line-height: 1.1
+  @include media-lg
+    font-size: 25px
+  @include media-md
+    font-size: 22px
+
+.title-block
+  margin-bottom: 50px
+  .h1
+    margin-bottom: 10px
+  .subtitle
+    // font-size: 18px
+
+
+// Parts
+@import parts/mainpromo
+@import parts/header
+@import parts/breadcrumbs
+// @import parts/advantages
+@import parts/objects
+@import parts/objectcard
+@import parts/apartments
+@import parts/request
+// @import parts/news
+
+@import parts/description
+@import parts/section
+@import parts/documents
+
+
+@import parts/footer

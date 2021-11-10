@@ -1,0 +1,30 @@
+extends layout/main
+
+block variables
+  - var title = 'Строительная компания СЗ "Конструктор" - ЖК "Виктория"'
+
+block main
+  .container
+    .wrapper
+      .breadcrumbs
+        a(href="/").breadcrumbs__link Главная
+        a(href="/objects.html").breadcrumbs__link Объекты
+        span.breadcrumbs__current ЖК &laquo;Виктория&raquo;
+      .title-block
+        h1.h1 Жилой комплекс &laquo;Виктория&raquo;
+        .subtitle Жилой многоквартирный дом со встроенными офисными помещениями и подземной одноэтажной автостоянкой по улице Шевчука
+      include parts/object_01/description_01
+
+    include parts/object_01/plans_01
+
+    .wrapper
+      section.section
+        .section__title
+          h2.h2 Расположение дома
+        .section__content
+          p Дом расположен в границах улиц Оборонной, Павла Морозова, Краснореченской. Его окружает развитая инфраструктура &mdash; дошкольные учереждения, бизнес-центры, техникум, отделения нескольких банков, магазины продовольственных и строительных товаров, поликлиники, аптека, парикмахерская, автосервис.
+        .section__fullcontent
+          img.section__map(src="/img/map_01.jpg", alt="Расположение дома")
+
+    include parts/object_01/progress_01
+    include parts/object_01/documents_01

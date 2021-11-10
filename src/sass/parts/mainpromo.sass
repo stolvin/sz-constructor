@@ -1,0 +1,87 @@
+.mainpromo
+  position: relative
+  height: 500px
+  margin-top: -120px
+  padding-top: 130px
+  background: $color-accent url(../img/mainpromo_bg2.jpg) center no-repeat
+  background-size: cover
+  transition: all .2s ease
+  @include media-lg
+    height: 400px
+  @include media-md
+    height: 300px
+    margin-top: -90px
+    padding-top: 90px
+
+  &:before
+    content: ''
+    position: absolute
+    top: 0
+    left: 0
+    width: calc(50% + 200px)
+    height: 100%
+    background-color: rgba($color-accent, .9)
+    clip-path: polygon(0 0, 100% 0, calc(100% - 200px) 100%, 0% 100%)
+    // box-shadow: 10px 0 7px rgba($color-font-main, .9)
+    // z-index: 1
+    transition: all .2s ease
+    @include media-lg
+      width: calc(50% + 150px)
+      clip-path: polygon(0 0, 100% 0, calc(100% - 150px) 100%, 0% 100%)
+    @include media-md
+      width: calc(50% + 100px)
+      clip-path: polygon(0 0, 100% 0, calc(100% - 100px) 100%, 0% 100%)
+    @include media-sm
+      width: calc(50% + 150px)
+      clip-path: polygon(0 0, 100% 0, calc(100% - 100px) 100%, 0% 100%)
+
+  &__block
+    height: 100%
+    display: flex
+    flex-direction: column
+    justify-content: center
+    
+  &__title
+    width: 50%
+    margin: 0
+    font-size: 36px
+    font-weight: 700
+    line-height: 1.05
+    color: $color-font-accent
+    z-index: 2
+    @include media-lg
+      font-size: 30px
+    @include media-md
+      font-size: 24px
+
+  &__button
+    display: inline-flex
+    justify-content: center
+    align-items: center
+    width: 270px
+    height: 60px
+    border: 1px solid $color-font-accent
+    border-radius: 6px
+    color: $color-font-accent
+    font-size: 18px
+    font-weight: 700
+    text-decoration: none
+    margin-top: 25px
+    cursor: pointer
+    transition: all .4s
+    z-index: 2
+    &:hover
+      background-color: rgba(#fff,.1)
+      border-color: rgba(#fff,.7)
+    @include media-lg
+      width: 230px
+      margin-top: 20px
+    @include media-md
+      font-size: 16px
+      width: 200px
+      height: 50px
+      margin-top: 15px
+    @include media-sm
+      font-size: 15px
+      width: 180px
+      height: 46px

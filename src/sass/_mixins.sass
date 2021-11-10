@@ -1,0 +1,26 @@
+@mixin min-max($min-width, $max-width, $padding)
+  min-width: $min-width
+  max-width: $max-width
+  margin: 0 auto
+  padding: 0 $padding
+
+@mixin media-xl
+	@media(max-width: $screen-width-xl)
+		@content
+		
+@mixin media-lg
+	@media(max-width: $screen-width-lg)
+		@content
+
+
+@mixin media-md
+	@media(max-width: $screen-width-md)
+		@content
+
+@mixin media-md2
+	@media(max-width: $screen-width-md2)
+		@content
+
+@mixin media-sm
+	@media(max-width: $screen-width-sm)
+		@content

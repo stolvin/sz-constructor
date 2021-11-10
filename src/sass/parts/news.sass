@@ -1,0 +1,46 @@
+.news
+  &__block
+    display: flex
+    justify-content: space-between
+    align-items: flex-start
+
+  &__title
+    width: 270px
+    font-size: 28px
+    line-height: 30px
+    margin: 0
+
+  &__carousel
+    width: 100%
+    margin-top: 50px
+  
+.carousel
+  display: flex
+  justify-content: space-between
+
+  &__nav--news
+    height: 180px
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    align-items: flex-start
+  
+  &__buttons
+    display: flex
+
+  &__img--news
+    height: 180px
+  
+  &__date
+    font-size: 15px
+    margin-bottom: 5px
+  
+  &__title--news
+    padding-left: 0
+    text-decoration: none
+    color: $color-font-main
+    &:hover
+      color: $color-accent
+    &::before
+      content: none
+      

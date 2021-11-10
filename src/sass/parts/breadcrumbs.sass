@@ -1,0 +1,20 @@
+.breadcrumbs
+  display: flex
+  margin-bottom: 25px
+  font-size: 15px
+  font-weight: 400
+  @include media-md
+    font-size: 14px
+
+
+  &__link
+    color: $color-accent
+    &:hover
+      color: $color-font-main
+    &::after
+      content: "/"
+      margin: 0 5px
+      color: $color-font-main
+  
+  &__current
+    color: $color-font-secondary

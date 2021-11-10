@@ -1,0 +1,48 @@
+$row-width: 1170px
+$gutter: 15px
+$gap: 30px
+$break: $row-width + 2 * $gutter
+// $break: $row-width + $gutter
+$col-width-post-break: ($row-width - 11 * $gap) / 12
+
+.container2
+  display: grid
+  grid-template-columns: $gutter repeat(11, calc((100% - 2 * #{$gutter} - 11 * #{$gap})/12) #{$gap}) calc((100% - 2 * #{$gutter} - 11 * #{$gap})/12) $gutter
+  @media screen and (min-width: #{$break})
+    grid-template-columns: calc(0.5 * (100% - #{$row-width})) repeat(11, #{$col-width-post-break} #{$gap}) #{$col-width-post-break} calc(0.5 * (100% - #{$row-width}))
+
+.overlay-container
+  width: 100%
+  left: 0px
+  top: 0px
+  z-index: 1
+  position: fixed
+  padding-left: $gutter
+  padding-right: $gutter
+
+.overlay
+  max-width: $row-width
+  margin-left: auto
+  margin-right: auto
+  display: grid
+  grid-template-columns: repeat(12, minmax(0, 1fr))
+  grid-gap: $gap
+  border: 1px solid green
+
+.col
+  background: rgba(255, 0, 0, 0.1)
+  height: 100vh
+
+.card
+  grid-column: 2/9
+  background: rgba(gray, 0.5)
+  display: flex
+  align-items: center
+  justify-content: center
+
+.image-container
+  grid-column: 12/26
+
+.image
+  display: block
+  max-width: 100%

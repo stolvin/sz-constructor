@@ -1,0 +1,54 @@
+.request
+  width: 100%
+  height: 380px
+  background: url(../img/request_bg.jpg) no-repeat 50% 50%
+  background-size: cover
+
+  &__block
+    padding-left: 315px
+    padding-top: 75px
+
+  &__title
+    font-size: 30px
+    text-transform: uppercase
+    letter-spacing: 2px
+
+  &__subtitle
+    font-size: 19px
+    font-weight: 700
+    letter-spacing: 1.4px
+    margin-top: 9px
+
+  &__form
+    display: flex
+    justify-content: space-between
+    align-items: flex-end
+    margin: 45px 0
+
+  &__item
+    width: 270px
+
+  &__label
+    font-size: 16px
+    // font-weight: 700
+  
+  &__input
+    width: 270px
+    height: 50px
+    padding: 0 10px
+    border-radius: 4px
+    border: 1px solid $color-accent
+    font: 200 18px $font-family-main
+    color: $color-font-main
+
+  &__input[type="submit"]
+    font-size: 16px
+    background-color: $color-accent
+    border: 1px solid $color-accent
+    color: $color-font-accent
+    cursor: pointer
+
+  &__warning
+    font-size: 15px
+    a
+      color: $color-font-main

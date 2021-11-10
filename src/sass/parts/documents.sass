@@ -1,0 +1,43 @@
+.documents 
+  &__list
+    position: relative
+    flex: 1 0 calc( 75% - 30px )
+    display: flex
+    // justify-content: space-between
+    flex-wrap: wrap
+    margin: 0 -15px 0 15px
+    // margin-left: 30px
+    // border: 1px solid
+
+  &__item
+    position: relative
+    display: flex
+    justify-content: start
+    align-items: center
+    flex: 0 0 33.33333%
+    height: 50px
+    // border: 1px solid green
+    padding: 0 15px
+    padding-left: 67px
+    margin-bottom: 40px
+    color: $color-accent
+    transition: all .2s ease
+    &::before
+      content: ''
+      position: absolute
+      // flex: 0 1 38px
+      left: 15px
+      width: 38px
+      height: 50px
+      // border: 1px solid
+      // margin-right: 15px
+      background: url(/img/icon_docs.svg) no-repeat
+      opacity: .7
+    &:hover
+      color: $color-accent
+      text-decoration: underline
+      &::before
+        opacity: 1
+
+  &__item:not(:last-child)
+    // margin-right: 30px

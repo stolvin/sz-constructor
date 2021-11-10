@@ -1,0 +1,41 @@
+extends layout/main
+
+block variables
+  - var title = 'Строительная компания СЗ "Конструктор" - Способы оплаты'
+
+block main
+  .container
+    .wrapper
+      //- .breadcrumbs
+        a(href="/").breadcrumbs__link Главная
+        span.breadcrumbs__current Как купить
+      h1.h1 Способы оплаты
+    .wrapper
+      section.section
+        .section__title
+          h2.h2 Банки-партнеры
+          .carousel__buttons
+            button.carousel__btn.carousel__btn--prev
+            button.carousel__btn.carousel__btn--next
+        .section__content
+          .carousel
+            .carousel__item
+              a(href="https://www.sberbank.ru/" target="_blank").carousel__link.fancybox
+                img(src="/img/bank_sberbank.svg").carousel__img.carousel__img--white
+                span.carousel__title СберБанк
+            .carousel__item
+              a(href="https://www.gazprombank.ru/" target="_blank").carousel__link.fancybox
+                img(src="/img/bank_gazprombank.svg").carousel__img.carousel__img--white
+                span.carousel__title Газпромбанк
+            .carousel__item
+              a(href="https://alfabank.ru/" target="_blank").carousel__link.fancybox
+                img(src="/img/bank_alfa.svg").carousel__img.carousel__img--white
+                span.carousel__title Альфа Банк
+            .carousel__item
+              a(href="https://www.vtb.ru/" target="_blank").carousel__link.fancybox
+                img(src="/img/bank_vtb.svg").carousel__img.carousel__img--white
+                span.carousel__title Банк ВТБ  
+            .carousel__item
+              a(href="https://www.psbank.ru/" target="_blank").carousel__link.fancybox
+                img(src="/img/bank_psb.svg").carousel__img.carousel__img--white
+                span.carousel__title Промсвязьбанк  

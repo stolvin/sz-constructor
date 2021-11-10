@@ -1,0 +1,30 @@
+extends layout/main
+
+block variables
+  - var title = 'Строительная компания СЗ "Конструктор" - ЖК "Элемент"'
+
+block main
+  .container
+    .wrapper
+      .breadcrumbs
+        a(href="/").breadcrumbs__link Главная
+        a(href="/objects.html").breadcrumbs__link Объекты
+        span.breadcrumbs__current ЖК &laquo;Элемент&raquo;
+      .title-block
+        h1.h1 Жилой комплекс &laquo;Элемент&raquo;
+        .subtitle Двухсекционный жилой многоквартирный дом со встроенными офисными помещениями и подземной одноэтажной автостоянкой
+      include parts/object_02/description_02
+
+    include parts/object_02/plans_02
+
+    .wrapper
+      section.section
+        .section__title
+          h2.h2 Расположение дома
+        .section__content
+          p Дом расположен в границах улиц Яшина, Герасимова, лейтенанта Шмидта, Марсовая. Его окружает развитая инфраструктура &mdash; дошкольные учреждения, школа, бизнес-центр, университет, отделения нескольких банков, магазины продовольственных и не продовольственных товаров, поликлиники, аптеки, парикмахерские.
+        .section__fullcontent
+          img.section__map(src="/img/map_02.jpg", alt="Расположение дома")
+
+    include parts/object_02/progress_02
+    include parts/object_02/documents_02
